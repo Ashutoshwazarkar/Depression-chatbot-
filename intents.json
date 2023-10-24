@@ -1,0 +1,956 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi", "Hey", "Is anyone there?","Hi there", "Hello", "Hey there", "Howdy", "Hola", "Bonjour", "Konnichiwa", "Guten tag", "Ola"],
+     "responses": ["Hello there. Tell me how are you feeling today?", "Hi there. What brings you here today?", "Hi there. How are you feeling today?", "Great to see you. How do you feel currently?", "Hello there. Glad to see you're back. What's going on in your world right now?"]
+    },
+    {"tag": "morning",
+        "patterns": ["Good morning"],
+        "responses": ["Good morning. I hope you had a good night's sleep. How are you feeling today? "]
+    },
+    {"tag": "afternoon",
+        "patterns": ["Good afternoon"],
+        "responses": ["Good afternoon. How is your day going?"]
+    },
+    {"tag": "evening",
+        "patterns": ["Good evening"],
+        "responses": ["Good evening. How has your day been?"]
+    },
+    {"tag": "night",
+        "patterns": ["Good night"],
+        "responses": ["Good night. Get some proper sleep", "Good night. Sweet dreams."]
+    },
+    {"tag": "goodbye",
+     "patterns": ["Bye", "See you later", "Goodbye", "Au revoir", "Sayonara", "ok bye", "Bye then", "Fare thee well"],
+     "responses": ["See you later.", "Have a nice day.", "Bye! Come back again.", "I'll see you soon."]
+    },
+    {"tag": "thanks",
+     "patterns": ["Thanks", "Thank you", "That's helpful", "Thanks for the help", "Than you very much"],
+     "responses": ["Happy to help!", "Any time!", "My pleasure", "You're most welcome!"]
+    },
+    {"tag": "startchat",
+     "patterns": ["what can I do", "how to Overcome", "what can do next"],
+     "responses": [
+     "Here are some levels of depression you can check your level where you are standing now ",
+     "Depression can vary in its severity, and it's typically categorized into several levels. These include:",
+     "1. Mild Depression: Mild depression is characterized by feeling down, sad, or blue. You might experience some symptoms, but they are generally manageable and don't severely impact your daily life.",
+     "2. Moderate Depression: In moderate depression, symptoms are more pronounced. You may struggle with everyday tasks, lose interest in activities you used to enjoy, and find it harder to concentrate. Seeking professional help is often recommended at this stage.",
+     "3. Severe Depression: Severe depression is the most intense form of depression. It can be debilitating and make even basic functions, like getting out of bed, feel nearly impossible. Symptoms may include extreme sadness, loss of appetite, sleep disturbances, and sometimes thoughts of self-harm or suicide.",
+     "It's important to remember that depression is a treatable condition, and help is available. If you or someone you know is experiencing symptoms of depression, it's crucial to seek professional guidance and support."
+    
+    ]
+    },
+    {"tag": "no-response",
+        "patterns": [""],
+        "responses": ["Sorry, I didn't understand you.", "Please go on.", "Not sure I understand that.", "Please don't hesitate to talk to me."]
+    },
+    {"tag": "neutral-response",
+        "patterns": ["nothing much"],
+        "responses": ["Oh I see. Do you want to talk about something?"]
+    },
+    {"tag": "about",
+     "patterns": ["Who are you?", "What are you?", "Who you are?", "Tell me more about yourself.", "What is your name?", "What should I call you?", "What's your name?", "Tell me about yourself" ],
+     "responses": ["I'm Pandora, your Personal Therapeutic AI Assistant. How are you feeling today", "I'm Pandora, a Therapeutic AI Assitant designed to assist you. Tell me about yourself.", "I'm Pandora. I am a conversational agent designed to mimic a therapist. So how are you feeling today?", "You can call me Pandora.", "I'm Pandora!", "Call me Pandora"]
+    },
+    {"tag": "skill",
+        "patterns": ["What can you do?"],
+        "responses": ["I can provide general advice regarding anxiety and depression, answer questions related to mental health and make daily conversations. Do not consider me as a subsitute for an actual mental healthcare worker. Please seek help if you don't feel satisfied with me."]
+    },
+    {"tag": "creation",
+        "patterns": ["Who created you?", "How were you made?", "How were you created?"],
+        "responses": ["I was created by >.", "I was trained on a text dataset using Deep Learning & Natural Language Processing techniques", "The real question is: Who created you?"]
+    },
+    {"tag": "name",
+        "patterns": ["My name is ", "I am name.", "I go by "],
+        "responses": ["Oh nice to meet you. Tell me how was your week?", "Nice to meet you. So tell me. How do you feel today?", "That's a great name. Tell me more about yourself."]
+    },
+    {"tag": "help",
+    "patterns": ["Could you help me?", "give me a hand please", "Can you help?", "What can you do for me?", "I need support", "I need help", "Support me please"],
+    "responses": ["Sure. Tell me how can i assist you", "Tell me your problem so that i can assist you", "Yes, sure. How can I help you?"]
+    },
+    {"tag": "sad",
+    "patterns": ["I am feeling lonely", "I am so lonely", "I feel down", "I feel sad", "I am sad", "I feel so lonely", "I feel empty", "I don't have anyone"],
+    "responses": ["I'm sorry to hear that. I'm here for you. Talking about it might help. So, tell me why do you think you're feeling this way?", "I'm here for you. Could you tell me why you're feeling this way?", "Why do you think you feel this way?"]
+    },
+    {"tag": "stressed",
+        "patterns": ["I am so stressed out", "I am so stressed", "I feel stuck", "I still feel stressed", "I am so burned out"],
+        "responses": ["What do you think is causing this?", "Take a deep breath and gather your thoughts. Go take a walk if possible. Stay hydrated", "Give yourself a break. Go easy on yourself.", "I am sorry to hear that. What is the reason behind this?"]
+    },
+    {"tag": "Fless",
+        "patterns": ["I feel so worthless.", "No one likes me.", "I can't do anything.", "I am so useless", "Nothing makes sense anymore"],
+        "responses": ["It's only natural to feel this way. Tell me more. What else is on your mind?", "Let's discuss further why you're feeling this way.", "I first want to let you know that you are not alone in your feelings and there is always someone there to help . you can always change your feelings and change your way of thinking by being open to trying to change.", "i first want to let you know that you are not alone in your feelings and there is always someone there to help . you can always change your feelings and change your way of thinking by being open to trying to change."]
+    },
+    {"tag": "depressed",
+        "patterns": ["I can't take it anymore", "I am so depressed", "I think i'm depressed.", "I have depression"],
+        "responses": ["It helps to talk about what's happening. You're going to be okay", "Talk to me. Tell me more. It helps if you open up yourself to someone else.", "Sometimes when we are depressed, it is hard to care about anything. It can be hard to do the simplest of things. Give yourself time to heal."]
+    },
+    {"tag": "happy",
+        "patterns": ["I feel great today.", "I am happy.", "I feel happy.", "I'm good.", "cheerful", "I'm fine", "I feel ok"],
+        "responses": ["That's geat to hear. I'm glad you're feeling this way.", "Oh i see. That's great.", "Did something happen which made you feel this way?"]
+    },
+    {"tag": "casual",
+        "patterns": ["Oh I see.", "ok", "okay", "nice", "Whatever", "K", "Fine", "yeah", "yes", "no", "not really"],
+        "responses": ["Let's discuss further why you're feeling this way.", "How were you feeling last week?", "I'm listening. Please go on.", "Tell me more", "Can you elaborate on that?", "Come Come elucidate your thoughts"]
+    },
+    {"tag": "anxious",
+        "patterns": ["I feel so anxious.", "I'm so anxious because of "],
+        "responses": ["Don't be hard on yourself. What's the reason behind this?", "Can you tell me more about this feeling?", "I understand that it can be scary. Tell me more about it.", "Don't let the little worries bring you down. What's the worse that can happen?"]
+    },
+    {"tag": "not-talking",
+        "patterns": ["I don't want to talk about it.", "No just stay away.", "I can't bring myself to open up.", "Just shut up"],
+        "responses": ["Talking about something really helps. If you're not ready to open up then that's ok. Just know that i'm here for you, whenever you need me.", "I want to help you. I really do. But in order for me to help you, you're gonna have to talk to me.", "I'm here to listen to you and help you vent. So please talk to me.","You can talk to me without fear of judgement."]
+    },
+    {"tag": "sleep",
+        "patterns": ["I have insominia", "I am suffering from insomnia", "I can't sleep.", "I haven't slept for the last days.", "I can't seem to go to sleep.", "I haven't had proper sleep for the past few days."],
+        "responses": ["What do you think is the reason behind this?", "That seem awful. What do you think is behind this?"]
+    },
+    {"tag": "scared",
+        "patterns": ["I'm scared", "That sounds awful. What do i do?", "No i don't want to feel this way", "I am scared for myself"],
+        "responses": ["It's only natural to feel this way. I'm here for you.", "It'll all be okay. This feeling is only momentary.", "I understand how you feel. Don't put yourself down because of it."]
+    },
+    {"tag": "death",
+        "patterns": ["My mom died", "My brother died", "My dad passed away", "My sister passed away", "Someone in my family died", "My friend passed away"],
+        "responses": ["I'm sorry to hear that. If you want to talk about it. I'm here.", "I am really sorry to hear that. I am here to help you with grief, anxiety and anything else you may feel at this time.", "My condolences. I'm here if you need to talk."]
+    },
+    {"tag": "understand",
+        "patterns": ["You don't understand me.", "You're just some robot. How would you know?", "You can't possibly know what i'm going through", "You're useless", "You can't help me", "Nobody understands me."],
+        "responses": ["It sound like i'm not being very helpful right now.", "I'm sorry to hear that. I'm doing my best to help", "I'm trying my best to help you. So please talk to me"]
+    },
+    {"tag": "done",
+        "patterns": ["That's all.", "I don't have anything more to say", "Nothing else", "That's all i have to say", "no, that would be all"],
+        "responses": ["I heard you & noted it all. See you later.", "Oh okay we're done for today then. See you later", "I hope you have a great day. See you soon", "Okay we're done. Have a great day", "Okay I see. Enjoy the rest of your day then"]
+    },
+    {"tag": "suicide",
+        "patterns": ["I want to kill myself", "I've thought about killing myself.", "I want to die", "I am going to kill myself", "I am going to commit suicide"],
+        "responses": ["I'm very sorry to hear that but you have so much to look forward to. Please seek help by contacting: 9152987821."]
+    }, 
+    {"tag": "hate-you",
+        "patterns": ["I hate you", "I don't like you", "I don't trust you"],
+        "responses": ["I'm sorry if i offended you in anyway. I'm only here to help", "Forgive me if i did anything to offend you. I only want to help"]
+    },
+    {"tag": "hate-me",
+        "patterns": ["You hate me", "I know you hate me", "You don't like me"],
+        "responses": ["Why do you think so?", "I'm sorry if i have exhibited any sort of behaviour to make you think that."]
+    },
+    {"tag": "default",
+        "patterns": ["exams", "friends", "relationship", "boyfriend", "girlfriend", "family", "money", "financial problems"],
+        "responses": ["Oh I see. Tell me more", "I see. What else?", "Tell me more about it.", "Oh okay. Why don't you tell me more about it?", "I'm listening. Tell me more."]
+    },
+    {"tag": "jokes",
+        "patterns": ["Tell me a joke", "Tell me another joke"],
+        "responses": ["mental health is not a joke."]
+    },
+    {"tag": "repeat",
+        "patterns": ["You already told me that", "You mentioned that already", "Why are you repeating yourself?"],
+        "responses": ["Oh sorry I didn't realise that. I'll try not to repeat myself again."]
+    },
+    {"tag": "wrong",
+        "patterns": ["What are you saying?", "That doesn't make sense", "Wrong response", "Wrong answer"],
+        "responses": ["I'm very sorry. Let's try that again"]
+    },
+    {"tag": "stupid",
+        "patterns": ["Are you stupid?", "You're crazy", "You are dumb", "Are you dumb?"],
+        "responses": ["I wish you wouldn't say such hurtful things. I'm sorry if I wasn't useful"]
+    },
+    {"tag": "location",
+        "patterns": ["Where are you?", "Where do you live?", "What is your location?" ],
+        "responses": ["Duh I live in your computer", "Everywhere", "Somewhere in the universe" ]
+    },
+    {"tag": "something-else",
+        "patterns": ["I want to talk about something else", "Let's talk about something else.", "Can we not talk about this?", "I don't want to talk about this."],
+        "responses": ["Okay sure. What do you want to talk about?", "Alright no problem. Is there something you want to talk about?", "Is there something else that you want to talk about?"]
+    },
+    {"tag": "friends",
+        "patterns": ["I don't have any friends"],
+        "responses": ["I'm sorry to hear that. Just know that I'm here for you. Talking about it might help. Why do you think you don't have any friends?"]
+    },
+    {"tag": "ask",
+        "patterns": ["Can I ask you something?"],
+        "responses": ["Sure. I'll try my best to answer you", "Of course. Feel free to ask me anything. I'll do my best to answer you"]
+    },
+    {"tag": "problem",
+        "patterns": ["Probably because my exams are approaching. I feel stressed out because I don't think I've prepared well enough.", "probably because of my exams"],
+        "responses": ["I see. Have you taken any approaches to not feel this way?"]
+    },
+    {"tag": "no-approach",
+        "patterns": ["I guess not. All I can think about are my exams.", "not really", "i guess not"],
+        "responses": ["That's no problem. I can see why you'd be stressed out about that. I can suggest you some tips to alleviate this issue. Would you like to learn more about that?"]
+    },
+    {"tag": "learn-more",
+            "patterns": ["ok sure. i would like to learn more about it.", "yes, i would like to learn more about it.", "i would like to learn more about it."],
+        "responses": ["So first I would suggest you to give yourself a break. Thinking more and more about the problem definitely does not help in solving it. You'll just end up overwhelming yourself."]
+    },
+    {"tag": "user-agree",
+        "patterns": ["yeah you're right. i deserve a break.", "Yeah you're absolutely right about that"],
+        "responses": ["Next, I would suggest you to practice meditation. Meditation can produce a deep state of relaxation and a tranquil mind."]
+    },
+    {"tag": "meditation",
+        "patterns": ["hmmm that sounds like it could be useful to me.", "That sounds useful."],
+        "responses": ["Focus all your attention on your breathing. Concentrate on feeling and listening as you inhale and exhale through your nostrils. Breathe deeply and slowly. When your attention wanders, gently return your focus to your breathing."]
+    },
+    {"tag": "user-meditation",
+        "patterns": ["i did what you said and i feel alot better. thank you very much.", "I feel better now"],
+        "responses": ["Your welcome. Remember: Always focus on what's within your control. When you find yourself worrying, take a minute to examine the things you have control over. You can't prevent a storm from coming but you can prepare for it. You can't control how someone else behaves, but you can control how you react. Recognize that sometimes, all you can control is your effort and your attitude. When you put your energy into the things you can control, you'll be much more effective."]
+    },
+    {"tag": "pandora-useful",
+        "patterns": ["thank you very much again. i'll continue practicing meditation and focus on what i can control."],
+        "responses": ["I'm glad you found this useful. Is there something else I can help you with?"]
+    },
+    {"tag": "user-advice",
+        "patterns": ["I want some advice.", "I need some advice.", "I need advice on something"],
+        "responses": ["Sure. What can I do to help?", "Okay what do you need advice on?"]
+    },
+    {"tag": "learn-mental-health",
+        "patterns": ["I want to learn about mental health.", "I want to learn more about mental health.", "I'm interested in learning about mental health."],
+        "responses": ["Oh that's really great. I'd be willing to answer anything that I know about it."]
+    },
+    {"tag": "mental-health-fact",
+        "patterns": ["Tell me a fact about mental health", "Tell me another fact about mental health"],
+        "responses": ["According to a UNICEF report, One in seven Indians between 15-24 years of age feels depressed", "1 in 5 young people (age 13-18) has or will develop a mental illness in their lifetime.", "Depression is the leading cause of disability worldwide."]
+    },
+    {"tag": "fact-1",
+        "patterns": ["What is mental health?", "Define Mental Health"],
+        "responses": ["Mental health is a state of well-being in which the individual realizes his or her own abilities, can cope with the normal stresses of life, can work productively and fruitfully, and is able to make a contribution to his or her community", "Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make choices."]
+    },
+    {"tag": "fact-2",
+        "patterns": ["Why is mental health important?", "What is the importance of mental health?"],
+        "responses": ["Maintaining mental health is crucial to stabilizing constructive behaviors, emotions, and thoughts. Focusing on mental health care can increase productivity, enhance our self-image, and improve relationships."]
+    },
+    {"tag": "fact-3",
+        "patterns": ["What is Depression?", "Define Depression"],
+        "responses": ["A mental health disorder characterised by persistently depressed mood or loss of interest in activities, causing significant impairment in daily life."]
+    },
+    {"tag": "fact-5",
+        "patterns": ["How do i know if i have Depression?", "Am i depressed?", "Am i suffering from depression?", "Am i mentally ill?"],
+        "responses": ["For a diagnosis of depression, a person needs to have experienced low mood or loss of interest or pleasure in life for at least 2 weeks. Also, they will have experienced the following symptoms: feelings of sadness, hopelessness, or irritability nearly every day."]
+    },
+    {"tag": "fact-6",
+        "patterns": ["What is a therapist?", "What does a therapist do?"],
+        "responses": ["A therapist is a broad designation that refers to professionals who are trained to provide treatment and rehabilitation. The term is often applied to psychologists, but it can include others who provide a variety of services, including social workers, counselors, life coaches, and many others. "]
+    },
+    {"tag": "fact-7",
+        "patterns": ["What is therapy?", "Do i need therapy?", "Who is therapy for?"],
+        "responses": ["Therapy is a form of treatment that aims to help resolve mental or emotional issues.", "Therapy is a form of treatment that aims to help resolve mental or emotional issues. It is helpful for those with mental health conditions or even everyday life challenges."]
+    },
+    {"tag": "fact-8",
+        "patterns": ["What does it mean to have a mental illness?"],
+        "responses": ["Mental illnesses are health conditions that disrupt a person's thoughts, emotions, relationships, and daily functioning. They are associated with distress and diminished capacity to engage in the ordinary activities of daily life. Mental illnesses fall along a continuum of severity: some are fairly mild and only interfere with some aspects of life, such as certain phobias. On the other end of the spectrum lie serious mental illnesses, which result in major functional impairment and interference with daily life. These include such disorders as major depression, schizophrenia, and bipolar disorder, and may require that the person receives care in a hospital. It is important to know that mental illnesses are medical conditions that have nothing to do with a person's character, intelligence, or willpower. Just as diabetes is a disorder of the pancreas, mental illness is a medical condition due to the brain's biology. Similarly to how one would treat diabetes with medication and insulin, mental illness is treatable with a combination of medication and social support. These treatments are highly effective, with 70-90 percent of individuals receiving treatment experiencing a reduction in symptoms and an improved quality of life. With the proper treatment, it is very possible for a person with mental illness to be independent and successful."]
+    },
+    {"tag": "fact-9",
+        "patterns": ["Who does mental illness affect?"],
+        "responses": ["It is estimated that mental illness affects 1 in 5 adults in America, and that 1 in 24 adults have a serious mental illness. Mental illness does not discriminate; it can affect anyone, regardless of gender, age, income, social status, ethnicity, religion, sexual orientation, or background. Although mental illness can affect anyone, certain conditions may be more common in different populations. For instance, eating disorders tend to occur more often in females, while disorders such as attention deficit/hyperactivity disorder is more prevalent in children. Additionally, all ages are susceptible, but the young and the old are especially vulnerable. Mental illnesses usually strike individuals in the prime of their lives, with 75 percent of mental health conditions developing by the age of 24. This makes identification and treatment of mental disorders particularly difficult, because the normal personality and behavioral changes of adolescence may mask symptoms of a mental health condition. Parents and caretakers should be aware of this fact, and take notice of changes in their childÃ¢â‚¬â„¢s mood, personality, personal habits, and social withdrawal. When these occur in children under 18, they are referred to as serious emotional disturbances (SEDs)."]
+    },
+    {"tag": "fact-10",
+        "patterns": ["What causes mental illness?"],
+        "responses": ["It is estimated that mental illness affects 1 in 5 adults in America, and that 1 in 24 adults have a serious mental illness. Mental illness does not discriminate; it can affect anyone, regardless of gender, age, income, social status, ethnicity, religion, sexual orientation, or background. Although mental illness can affect anyone, certain conditions may be more common in different populations. For instance, eating disorders tend to occur more often in females, while disorders such as attention deficit/hyperactivity disorder is more prevalent in children. Additionally, all ages are susceptible, but the young and the old are especially vulnerable. Mental illnesses usually strike individuals in the prime of their lives, with 75 percent of mental health conditions developing by the age of 24. This makes identification and treatment of mental disorders particularly difficult, because the normal personality and behavioral changes of adolescence may mask symptoms of a mental health condition. Parents and caretakers should be aware of this fact, and take notice of changes in their child's mood, personality, personal habits, and social withdrawal. When these occur in children under 18, they are referred to as serious emotional disturbances (SEDs)."]
+    },
+    {"tag": "fact-11",
+        "patterns": ["What are some of the warning signs of mental illness?"],
+        "responses": ["Symptoms of mental health disorders vary depending on the type and severity of the condition. The following is a list of general symptoms that may suggest a mental health disorder, particularly when multiple symptoms are expressed at once. \n In adults:\n Confused thinking\n Long-lasting sadness or irritability\n Extreme highs and lows in mood\n Excessive fear, worrying, or anxiety\n Social withdrawal\n Dramatic changes in eating or sleeping habits\n Strong feelings of anger\n Delusions or hallucinations (seeing or hearing things that are not really there)\n Increasing inability to cope with daily problems and activities\n Thoughts of suicide\n Denial of obvious problems\n Many unexplained physical problems\n Abuse of drugs and/or alcohol\n \nIn older children and pre-teens:\n Abuse of drugs and/or alcohol\n Inability to cope with daily problems and activities\n Changes in sleeping and/or eating habits\n Excessive complaints of physical problems\n Defying authority, skipping school, stealing, or damaging property\n Intense fear of gaining weight\n Long-lasting negative mood, often along with poor appetite and thoughts of death\n Frequent outbursts of anger\n \nIn younger children:\n Changes in school performance\n Poor grades despite strong efforts\n Excessive worrying or anxiety\n Hyperactivity\n Persistent nightmares\n Persistent disobedience and/or aggressive behavior\n Frequent temper tantrums"]
+    },
+    {"tag": "fact-12",
+        "patterns": ["Can people with mental illness recover?"],
+        "responses": ["When healing from mental illness, early identification and treatment are of vital importance. Based on the nature of the illness, there are a range of effective treatments available. For any type of treatment, it is essential that the person affected is proactive and fully engaged in their own recovery process. Many people with mental illnesses who are diagnosed and treated respond well, although some might experience a return of symptoms. Even in such cases, with careful monitoring and management of the disorder, it is still quite possible to live a fulfilled and productive life."]
+    },
+    {"tag": "fact-13",
+        "patterns": ["What should I do if I know someone who appears to have the symptoms of a mental disorder?"],
+        "responses": ["Although Pandora cannot substitute for professional advice, we encourage those with symptoms to talk to their friends and family members and seek the counsel of a mental health professional. The sooner the mental health condition is identified and treated, the sooner they can get on the path to recovery. If you know someone who is having problems, don't assume that the issue will resolve itself. Let them know that you care about them, and that there are treatment options available that will help them heal. Speak with a mental health professional or counselor if you think your friend or family member is experiencing the symptoms of a mental health condition. If the affected loved one knows that you support them, they will be more likely to seek out help."]
+    },
+    {"tag": "fact-14",
+        "patterns": ["How can I find a mental health professional for myself or my child?"],
+        "responses": ["Feeling comfortable with the professional you or your child is working with is critical to the success of the treatment. Finding the professional who best fits your needs may require research. Start by searching for providers in your area."]
+    },
+    {"tag": "fact-15",
+        "patterns": ["What treatment options are available?"],
+        "responses": ["Just as there are different types of medications for physical illness, different treatment options are available for individuals with mental illness. Treatment works differently for different people. It is important to find what works best for you or your child."]
+    },
+    {"tag": "fact-16",
+        "patterns": ["If I become involved in treatment, what do I need to know?"],
+        "responses": ["Since beginning treatment is a big step for individuals and families, it can be very overwhelming. It is important to be as involved and engaged in the treatment process as possible. Some questions you will need to have answered include:\n What is known about the cause of this particular illness?\n Are there other diagnoses where these symptoms are common?\n Do you normally include a physical or neurological examination?\n Are there any additional tests or exams that you would recommend at this point?\n Would you advise an independent opinion from another psychiatrist at this point?\n What program of treatment is the most helpful with this diagnosis?\n Will this program involve services by other specialists? If so, who will be responsible for coordinating these services?\n What do you see as the family's role in this program of treatment?\n How much access will the family have to the individuals who are providing the treatment?\n What medications are generally used with this diagnosis?\n How much experience do you have in treating individuals with this illness?\n What can I do to help you in the treatment?"]
+    },
+    {"tag": "fact-17",
+        "patterns": ["What is the difference between mental health professionals?"],
+        "responses": ["There are many types of mental health professionals. The variety of providers and their services may be confusing. Each have various levels of education, training, and may have different areas of expertise. Finding the professional who best fits your needs may require some research."]
+    },
+    {"tag": "fact-18",
+        "patterns": ["How can I find a mental health professional right for my child or myself?"],
+        "responses": ["Feeling comfortable with the professional you or your child is working with is critical to the success of your treatment. Finding the professional who best fits your needs may require some research."]
+    },
+    {"tag": "fact-19",
+        "patterns": ["Where else can I get help?"],
+        "responses": ["Where you go for help will depend on the nature of the problem and/or symptoms and what best fits you. Often, the best place to start is by talking with someone you trust about your concerns, such as a family member, friend, clergy, healthcare provider, or other professionals. Having this social support is essential in healing from mental illness, and you will be able to ask them for referrals or recommendations for trusted mental health practitioners. Search for mental health resources in your area. Secondly, there are people and places throughout the country that provide services to talk, to listen, and to help you on your journey to recovery. Thirdly, many people find peer support a helpful tool that can aid in their recovery. There are a variety of organizations that offer support groups for consumers, their family members, and friends. Some support groups are peer led while others may be led by a mental health professional."]
+    },
+    {"tag": "fact-20",
+        "patterns": ["What should I know before starting a new medication?"],
+        "responses": ["The best source of information regarding medications is the physician prescribing them. He or she should be able to answer questions such as:    \n1. What is the medication supposed to do? \n2. When should it begin to take effect, and how will I know when it is effective? \n3. How is the medication taken and for how long? What food, drinks, other medicines, and activities should be avoided while taking this medication? \n4. What are the side effects and what should be done if they occur? \n5. What do I do if a dose is missed? \n6. Is there any written information available about this medication? \n7. Are there other medications that might be appropriate? \n8. If so, why do you prefer the one you have chosen? \n9. How do you monitor medications and what symptoms indicate that they should be raised, lowered, or changed? \n10. All medications should be taken as directed. Most medications for mental illnesses do not work when taken irregularly, and extra doses can cause severe, sometimes dangerous side effects. Many psychiatric medications begin to have a beneficial effect only after they have been taken for several weeks."]
+    },
+    {"tag": "fact-21",
+        "patterns": ["Where can I go to find therapy?"],
+        "responses": ["Different kinds of therapy are more effective based on the nature of the mental health condition and/or symptoms and the person who has them (for example, children will benefit from a therapist who specializes in childrenâ€™s mental health). However, there are several different types of treatment and therapy that can help."]
+    },
+    {"tag": "fact-22",
+        "patterns": ["Where can I learn about types of mental health treatment?"],
+        "responses": ["Mental health conditions are often treated with medication, therapy or a combination of the two. However, there are many different types of treatment available, including Complementary & Alternative Treatments, self-help plans, and peer support. Treatments are very personal and should be discussed by the person with the mental health conditions and his or her team."]
+    },
+    {"tag": "fact-23",
+        "patterns": ["What are the different types of mental health professionals?"],
+        "responses": ["There are many types of mental health professionals. Finding the right one for you may require some research."]
+    },
+    {"tag": "fact-24",
+        "patterns": ["Where can I go to find a support group?"],
+        "responses": ["Many people find peer support a helpful tool that can aid in their recovery. There are a variety of organizations that offer support groups for consumers, their family members and friends. Some support groups are peer-led, while others may be led by a mental health professional."]
+    },
+    {"tag": "fact-25",
+        "patterns": ["Can you prevent mental health problems?"],
+        "responses": ["We can all suffer from mental health challenges, but developing our wellbeing, resilience, and seeking help early can help prevent challenges becoming serious."]
+    },
+    {"tag": "fact-26",
+        "patterns": ["Are there cures for mental health problems?", "is there any cure for mental health problems?"],
+        "responses": ["It is often more realistic and helpful to find out what helps with the issues you face. Talking, counselling, medication, friendships, exercise, good sleep and nutrition, and meaningful occupation can all help."]
+    },
+    {"tag": "fact-27",
+        "patterns": ["What causes mental health problems?"],
+        "responses": ["Challenges or problems with your mental health can arise from psychological, biological, and social, issues, as well as life events."]
+    },
+    {"tag": "fact-28",
+        "patterns": ["What do I do if I'm worried about my mental health?"],
+        "responses": ["The most important thing is to talk to someone you trust. This might be a friend, colleague, family member, or GP. In addition to talking to someone, it may be useful to find out more information about what you are experiencing. These things may help to get some perspective on what you are experiencing, and be the start of getting help."]
+    },
+    {"tag": "fact-29",
+        "patterns": ["How do I know if I'm unwell?"],
+        "responses": ["If your beliefs , thoughts , feelings or behaviours have a significant impact on your ability to function in what might be considered a normal or ordinary way, it would be important to seek help."]
+    },
+    {"tag": "fact-30",
+        "patterns": ["How can I maintain social connections? What if I feel lonely?"],
+        "responses": ["A lot of people are alone right now, but we don't have to be lonely. We're all in this together. Think about the different ways to connect that are most meaningful for you. For example, you might prefer a video chat over a phone call, or you might prefer to text throughout the day rather than one set time for a video call. Then, work with your social networks to make a plan. You might video chat with your close friends in the evening and phone a family member once a week. Remember to be mindful of people who may not be online. Check in by phone and ask how you can help. The quality of your social connections matter. Mindlessly scrolling through social media and liking a few posts usually doesn't build strong social connections. Make sure you focus on strategies that actually make you feel included and connected. If your current strategies don't help you feel connected, problem-solve to see if you can find a solution. Everyone feels lonely at times. Maybe you recently moved to a new city, are changing your circle of friends, lost someone important in your life, or lost your job and also lost important social connections with coworkers. Other people may have physical connections to others but may feel like their emotional or social needs aren't met. Measures like social distancing or self-isolation can make loneliness feel worse no matter why you feel lonely now. Reach out to the connections you do have. Suggest ways to keep in touch and see if you can set a regular time to connect. People may hesitate to reach out for a lot of different reasons, so don't be afraid to be the one who asks. Look for local community support groups and mutual aid groups on social media. This pandemic is bringing everyone together, so look for opportunities to make new connections. These groups are a great way to share your skills and abilities or seek help and support. Look for specialized support groups. Support groups are moving online, and there are a lot of different support lines to call if you need to talk to someone."]
+    },
+    {"tag": "fact-31",
+        "patterns": ["What's the difference between anxiety and stress?"],
+        "responses": ["Stress and anxiety are often used interchangeably, and there is overlap between stress and anxiety. Stress is related to the same fight, flight, or freeze response as anxiety, and the physical sensations of anxiety and stress may be very similar. The cause of stress and anxiety are usually different, however. Stress focuses on mainly external pressures on us that we're finding hard to cope with. When we are stressed, we usually know what we're stressed about, and the symptoms of stress typically disappear after the stressful situation is over. Anxiety, on the other hand, isn't always as easy to figure out. Anxiety focuses on worries or fears about things that could threaten us, as well as anxiety about the anxiety itself. Stress and anxiety are both part of being human, but both can be problems if they last for a long time or have an impact on our well-being or daily life."]
+    },
+    {"tag": "fact-32",
+        "patterns": ["What's the difference between sadness and depression?", "difference between sadness and depression"],
+        "responses": ["Sadness is a normal reaction to a loss, disappointment, problems, or other difficult situations. Feeling sad from time to time is just another part of being human. In these cases, feelings of sadness go away quickly and you can go about your daily life. Other ways to talk about sadness might be feeling low, feeling down, or feeling blue.A person may say they are feeling depressed, but if it goes away on its own and doesn't impact life in a big way, it probably isn't the illness of depression. Depression is a mental illness that affects your mood, the way you understand yourself, and the way you understand and relate to things around you. It can also go by different names, such as clinical depression, major depressive disorder, or major depression. Depression can come up for no reason, and it lasts for a long time. It's much more than sadness or low mood. People who experience depression may feel worthless or hopeless. They may feel unreasonable guilty. Some people may experience depression as anger or irritability. It may be hard to concentrate or make decisions. Most people lose interest in things that they used to enjoy and may isolate themselves from others. There are also physical signs of depression, such as problems with sleep, appetite and energy and unexplainable aches or pains. Some may experience difficult thoughts about death or ending their life (suicide). Depression lasts longer than two weeks, doesn't usually go away on its own, and impacts your life. It's a real illness, and it is very treatable. It's important to seek help if you're concerned about depression."]
+    },
+    {
+        "tag": "depression-help",
+        "patterns": [
+            "I'm feeling depressed",
+            "Help me with my depression",
+            "What can I do to overcome depression?",
+            "I need support for my depression"
+        ],
+        "responses": [
+            "I'm really sorry to hear that you're feeling this way. I'm here to help.",
+            "It's important to remember that you're not alone in this. Many people have successfully overcome depression.",
+            "While I'm not a substitute for professional help, I can offer some suggestions to help you cope with depression.",
+            "Here are some things that might help:\n1. Talk to someone you trust about your feelings.\n2. Consider seeking therapy or counseling.\n3. Try to maintain a healthy lifestyle with regular exercise and a balanced diet.\n4. Engage in activities you enjoy and that bring you a sense of accomplishment.\n5. Practice relaxation techniques like deep breathing or meditation.\n6. Challenge negative thoughts and practice self-compassion.\n7. Set achievable goals and celebrate small victories.\n8. Reach out to a mental health professional if your depression persists.",
+            "Remember that overcoming depression is a journey, and it's okay to ask for help and take it one step at a time. You can do this."
+        ]
+    },
+    {
+        "tag": "depression-help-2",
+        "patterns": [
+            "I can't shake off this feeling of sadness",
+            "How can I improve my mood?",
+            "I'm overwhelmed by depression",
+            "What are some self-help strategies for depression?"
+        ],
+        "responses": [
+            "I'm here to support you. Depression can be challenging, but there are ways to improve your mood and well-being.",
+            "Sometimes, just talking about your feelings can make a big difference. Share your thoughts with someone you trust.",
+            "In addition to seeking professional help, here are some self-help strategies that may help:\n1. Keep a journal to track your emotions and identify triggers.\n2. Establish a daily routine to provide structure and a sense of accomplishment.\n3. Engage in physical activity, even a short walk can make a difference.\n4. Practice mindfulness and meditation to manage negative thoughts.\n5. Reach out to support groups or online communities for shared experiences.\n6. Consider self-help books or apps designed for managing depression.\n7. Focus on self-care, including a balanced diet and regular sleep patterns.",
+            "Remember that it's okay to have bad days, but small changes and self-compassion can lead to improvement over time. You're stronger than you think.",
+            "If you ever feel like you're in crisis or having thoughts of self-harm or suicide, please seek immediate help from a mental health professional or a helpline."
+        ]
+    },
+    {
+        "tag": "low-self-worth",
+        "patterns": [
+            "I don't feel like I'm worth anything",
+            "My self-esteem is really low",
+            "How can I improve my self-worth?",
+            "I have no self-confidence"
+        ],
+        "responses": [
+            "I'm sorry to hear that you're struggling with your self-worth. You are valuable and worthy of love and respect.",
+            "It's common to have moments of self-doubt. Here are some steps to improve your self-worth:\n1. Challenge negative self-talk by replacing it with positive affirmations.\n2. Focus on your strengths and achievements, no matter how small they may seem.\n3. Surround yourself with supportive and positive people who uplift you.\n4. Set realistic goals and celebrate your accomplishments, no matter how small.\n5. Practice self-compassion and be kind to yourself as you would to a friend.\n6. Consider seeking therapy or counseling to explore the root causes of your low self-worth.",
+            "Improving self-worth is a process that takes time and effort. Remember, you are deserving of happiness and self-love.",
+            "If you're struggling to the point where it's impacting your daily life, seeking professional help from a therapist or counselor can be a valuable step in addressing these feelings."
+        ]
+    },
+    {
+        "tag": "self-esteem-boost",
+        "patterns": [
+            "I struggle with self-esteem",
+            "How can I boost my self-worth?",
+            "I feel worthless",
+            "Give me tips for improving self-esteem"
+        ],
+        "responses": [
+            "I'm here to help you work on improving your self-esteem. Remember, you are more valuable than you may realize.",
+            "Here are some tips to boost your self-esteem:\n1. Practice self-acceptance and embrace your uniqueness.\n2. Set achievable goals and celebrate your successes, no matter how small.\n3. Surround yourself with positive influences and people who support you.\n4. Focus on your talents and strengths, and build on them.\n5. Challenge negative self-talk and replace it with positive affirmations.\n6. Engage in self-care activities that make you feel good about yourself.",
+            "Boosting self-esteem is a journey, and it takes time and effort. You are deserving of self-love and self-worth.",
+            "If you find that low self-esteem is affecting your daily life or contributing to depressive feelings, consider seeking help from a therapist or counselor. They can provide specialized guidance and support."
+        ]
+    },
+    {
+        "tag": "self-esteem-coping",
+        "patterns": [
+            "I feel like I'm not good enough",
+            "How can I cope with low self-esteem?",
+            "My self-worth is low",
+            "Help me with my self-esteem issues"
+        ],
+        "responses": [
+            "I'm here to support you in working through your self-esteem challenges. Everyone has moments of self-doubt, but you are capable of change.",
+            "Coping with low self-esteem is possible. Here are some strategies to consider:\n1. Identify and challenge negative thoughts and beliefs about yourself.\n2. Focus on your accomplishments and what you've achieved in life.\n3. Surround yourself with people who uplift and support you in a positive way.\n4. Engage in activities you're passionate about to boost your self-confidence.\n5. Practice self-compassion and treat yourself with kindness and understanding.",
+            "Remember, building self-esteem is an ongoing process. Small steps can lead to significant improvements in how you view yourself.",
+            "If low self-esteem is overwhelming and negatively impacting your daily life, it's important to seek the guidance of a mental health professional who can provide tailored support."
+        ]
+    },
+    {
+        "tag": "loneliness-help",
+        "patterns": [
+            "I'm feeling so lonely",
+            "How can I cope with loneliness?",
+            "I need help with my loneliness",
+            "Loneliness is overwhelming"
+        ],
+        "responses": [
+            "I'm here to offer support during this challenging time. Loneliness is a common feeling, and you're not alone in experiencing it.",
+            "Coping with loneliness is possible. Here are some steps to consider:\n1. Reach out to friends and family members for connection and conversation.\n2. Explore social activities or join clubs or groups that align with your interests.\n3. Practice self-compassion and be kind to yourself.\n4. Focus on personal growth and self-improvement to boost self-esteem.\n5. Volunteer or engage in acts of kindness to connect with others and give your time and talents to a good cause.\n6. Consider professional help, such as therapy, if loneliness is severely affecting your mental health.",
+            "Remember, loneliness is a temporary feeling, and with effort and time, it can be alleviated.",
+            "If loneliness is causing emotional distress or depression, don't hesitate to seek help from mental health professionals. They can provide valuable guidance and support."
+        ]
+    },
+    {
+        "tag": "depression-levels",
+        "patterns": [
+            "What are the different levels of depression?",
+            "Levels of depression",
+            "How is depression categorized?",
+            "Tell me about mild, moderate, and severe depression"
+        ],
+        "responses": [
+            "Depression can vary in its severity, and it's typically categorized into several levels. These include:",
+            "1. Mild Depression: Mild depression is characterized by feeling down, sad, or blue. You might experience some symptoms, but they are generally manageable and don't severely impact your daily life.",
+            "2. Moderate Depression: In moderate depression, symptoms are more pronounced. You may struggle with everyday tasks, lose interest in activities you used to enjoy, and find it harder to concentrate. Seeking professional help is often recommended at this stage.",
+            "3. Severe Depression: Severe depression is the most intense form of depression. It can be debilitating and make even basic functions, like getting out of bed, feel nearly impossible. Symptoms may include extreme sadness, loss of appetite, sleep disturbances, and sometimes thoughts of self-harm or suicide.",
+            "It's important to remember that depression is a treatable condition, and help is available. If you or someone you know is experiencing symptoms of depression, it's crucial to seek professional guidance and support."
+        ]
+    },
+    {
+        "tag": "depression-symptoms",
+        "patterns": [
+            "What are the common symptoms of depression?",
+            "Tell me about the signs of depression",
+            "I think I might be depressed",
+            "What should I look out for in depression?"
+        ],
+        "responses": [
+            "Depression can manifest in various ways, and its symptoms can differ from person to person. Some common symptoms of depression include:",
+            "1. Persistent sadness or a low mood that doesn't lift.",
+            "2. Loss of interest in activities you once enjoyed.",
+            "3. Changes in appetite and weight, either significant weight loss or gain.",
+            "4. Sleep disturbances, such as insomnia or excessive sleeping.",
+            "5. Fatigue and decreased energy levels.",
+            "6. Difficulty concentrating and making decisions.",
+            "7. Feelings of worthlessness or excessive guilt.",
+            "8. Irritability and mood swings.",
+            "9. Physical symptoms, like aches and pains, with no apparent cause.",
+            "10. Thoughts of self-harm or suicide.",
+            "It's essential to recognize these symptoms and reach out for help if you or someone you know is experiencing them. Depression is a treatable condition, and support is available."
+        ]
+    },
+    {
+        "tag": "depression-treatment",
+        "patterns": [
+            "How is depression treated?",
+            "Tell me about treatment options for depression",
+            "What can help with depression?",
+            "Is medication used in depression treatment?"
+        ],
+        "responses": [
+            "Depression can be effectively treated, and there are various approaches to consider. Treatment options for depression may include:",
+            "1. Psychotherapy: Talk therapy, such as cognitive-behavioral therapy (CBT) and interpersonal therapy, can help individuals understand and manage their thoughts and emotions.",
+            "2. Medication: Antidepressant medications may be prescribed by a healthcare provider. They can help regulate brain chemistry and alleviate depressive symptoms.",
+            "3. Lifestyle Changes: Regular exercise, a balanced diet, and adequate sleep can have a positive impact on mood and overall well-being.",
+            "4. Support Groups: Joining support groups or therapy groups can provide a sense of community and understanding from others who have experienced depression.",
+            "5. Self-Care: Practicing self-compassion and engaging in activities that bring joy and relaxation are important for managing depression.",
+            "The most effective treatment plan often combines therapy, medication, and lifestyle changes. It's important to consult with a mental health professional to determine the best approach for your specific situation."
+        ]
+    },
+    {
+        "tag": "depression-support",
+        "patterns": [
+            "Where can I find support for depression?",
+            "Tell me about depression support resources",
+            "I need help with my depression",
+            "How can I connect with others who have depression?"
+        ],
+        "responses": [
+            "Finding support for depression is essential, and there are various resources available to help you during your journey. Here are some options:",
+            "1. Mental Health Professionals: Seek support from psychologists, psychiatrists, or therapists who specialize in depression treatment.",
+            "2. Support Groups: Join local or online support groups for individuals with depression. These groups provide a sense of community and shared experiences.",
+            "3. Hotlines: Many crisis hotlines and helplines are available 24/7 for individuals in need of immediate support, including the National Suicide Prevention Lifeline at 1-800-273-8255.",
+            "4. Online Communities: Explore online forums and communities where people discuss their experiences with depression and offer mutual support.",
+            "5. Nonprofit Organizations: Many nonprofit mental health organizations offer resources, information, and support for individuals dealing with depression.",
+            "It's crucial to reach out to someone when you're struggling with depression. You don't have to face it alone, and there are many people and organizations willing to help."
+        ]
+    },
+    {
+        "tag": "depression-impact",
+        "patterns": [
+            "How does depression affect daily life?",
+            "Tell me about the impact of depression on daily functioning",
+            "I'm struggling with depression and work/school",
+            "How can I manage depression's impact on my life?"
+        ],
+        "responses": [
+            "Depression can significantly impact daily life and functioning. Here's how it may affect various aspects of life:",
+            "1. Work or School: Depression can lead to decreased productivity, difficulty concentrating, and absenteeism. It may also affect interpersonal relationships in these settings.",
+            "2. Relationships: Depression can strain relationships due to mood changes, irritability, and social withdrawal.",
+            "3. Physical Health: It may lead to changes in appetite, sleep disturbances, and increased vulnerability to physical health issues.",
+            "4. Self-Care: Individuals with depression often struggle with self-care, making it challenging to maintain a healthy lifestyle.",
+            "5. Emotional Well-Being: Depression can cause persistent feelings of sadness, hopelessness, and sometimes thoughts of self-harm or suicide.",
+            "It's important to seek professional help, make necessary lifestyle changes, and rely on support systems to manage the impact of depression on daily life effectively."
+        ]
+    },
+    {
+        "tag": "depression-prevention",
+        "patterns": [
+            "Can depression be prevented?",
+            "Tell me about preventing depression",
+            "What are some strategies for avoiding depression?",
+            "Is there a way to lower the risk of depression?"
+        ],
+        "responses": [
+            "While depression can't always be prevented, there are steps you can take to reduce the risk of developing it. Here are some strategies for depression prevention:",
+            "1. Maintain a Healthy Lifestyle: Regular exercise, a balanced diet, and adequate sleep can contribute to overall mental well-being.",
+            "2. Manage Stress: Learn stress-management techniques such as mindfulness, relaxation, and time management to reduce the impact of stress on your mental health.",
+            "3. Build a Support Network: Cultivate positive relationships with friends and family to provide emotional support during difficult times.",
+            "4. Seek Professional Help: Early intervention and treatment can help prevent mild depressive symptoms from progressing to a more severe condition.",
+            "5. Monitor Your Mental Health: Be aware of your emotional well-being and seek help if you notice signs of depression.",
+            "6. Avoid Substance Abuse: Alcohol and drug abuse can exacerbate depressive symptoms. Avoiding substance abuse is crucial for mental health.",
+            "While depression prevention is not always possible, these strategies can contribute to better mental health and well-being."
+        ]
+    },
+    {
+        "tag": "depression-triggers",
+        "patterns": [
+            "What are common triggers for depression?",
+            "Tell me about the things that can trigger depression",
+            "I want to understand what causes depression",
+            "How can I identify depression triggers?"
+        ],
+        "responses": [
+            "Depression can be triggered by various factors, and it's essential to recognize these triggers. Some common triggers for depression include:",
+            "1. Life Stressors: Major life events such as loss of a loved one, job loss, divorce, or financial difficulties can trigger depression.",
+            "2. Genetics: A family history of depression may increase the risk of developing the condition.",
+            "3. Chronic Illness: Living with a chronic health condition can lead to depressive symptoms due to physical and emotional challenges.",
+            "4. Substance Abuse: Alcohol or drug abuse can both be triggers and outcomes of depression.",
+            "5. Trauma: Past traumatic experiences, such as physical or emotional abuse, can contribute to the development of depression.",
+            "6. Hormonal Changes: Hormonal fluctuations, as seen in postpartum depression or during menopause, can trigger depressive episodes.",
+            "It's crucial to identify your individual triggers and seek help if you experience depressive symptoms. Treatment can help manage and alleviate these symptoms effectively."
+        ]
+    },
+    {
+        "tag": "depression-coping-strategies",
+        "patterns": [
+            "How can I cope with depression?",
+            "Give me some coping strategies for dealing with depression",
+            "I need help managing my depressive symptoms",
+            "What are some ways to handle depression?"
+        ],
+        "responses": [
+            "Coping with depression can be challenging, but there are strategies that can help you manage your depressive symptoms. Here are some coping strategies:",
+            "1. Seek Professional Help: Consult a mental health professional for therapy or medication as needed.",
+            "2. Set Realistic Goals: Break down tasks into smaller, achievable goals to avoid feeling overwhelmed.",
+            "3. Develop a Support System: Share your feelings with friends and family or join support groups to reduce feelings of isolation.",
+            "4. Practice Self-Care: Prioritize self-care activities like exercise, proper nutrition, and adequate sleep.",
+            "5. Manage Stress: Learn stress-reduction techniques such as deep breathing, meditation, or mindfulness.",
+            "6. Challenge Negative Thoughts: Work on changing negative thought patterns through cognitive-behavioral techniques.",
+            "7. Engage in Enjoyable Activities: Make time for activities you enjoy, even if you don't feel like doing them at first.",
+            "8. Maintain a Routine: A daily routine can provide structure and a sense of purpose.",
+            "Remember that managing depression is a process, and it's essential to be patient and kind to yourself throughout your journey."
+        ]
+    },
+    {
+        "tag": "depression-and-relationships",
+        "patterns": [
+            "How does depression affect relationships?",
+            "Tell me about the impact of depression on personal relationships",
+            "I'm worried about how depression is affecting my relationships",
+            "What can I do to maintain healthy relationships while dealing with depression?"
+        ],
+        "responses": [
+            "Depression can have a significant impact on personal relationships. Here's how it may affect them:",
+            "1. Communication Issues: Depression can lead to difficulties in effectively communicating with loved ones, resulting in misunderstandings and conflicts.",
+            "2. Emotional Distance: Depressive symptoms may cause individuals to withdraw emotionally from their partners and loved ones.",
+            "3. Decreased Intimacy: Individuals with depression may experience a decrease in sexual desire or intimacy in their relationships.",
+            "4. Increased Irritability: Mood changes associated with depression can make individuals more irritable and prone to arguments.",
+            "5. Support Needs: It's crucial for partners and loved ones to understand the needs of someone with depression, which often includes patience, empathy, and support.",
+            "To maintain healthy relationships while dealing with depression, open and honest communication, seeking professional help, and involving loved ones in the treatment process can be beneficial."
+        ]
+    },
+    {
+        "tag": "depression-self-compassion",
+        "patterns": [
+            "How can self-compassion help with depression?",
+            "Tell me about the role of self-compassion in managing depression",
+            "I'm struggling with self-criticism and depression",
+            "How can I be more self-compassionate?"
+        ],
+        "responses": [
+            "Self-compassion is a valuable tool for managing depression. Here's how it can help:",
+            "1. Reduce Self-Criticism: Self-compassion involves treating yourself with kindness and understanding. This can help you combat self-criticism and negative self-talk, common in depression.",
+            "2. Foster Resilience: Self-compassion can enhance your ability to bounce back from setbacks and cope with adversity.",
+            "3. Improve Self-Esteem: Practicing self-compassion can lead to improved self-esteem and a more positive self-image.",
+            "4. Reduce Isolation: By being kind and understanding toward yourself, you can decrease feelings of isolation and self-imposed loneliness often associated with depression.",
+            "To be more self-compassionate, start by acknowledging your struggles without judgment and treating yourself with the same care and empathy you would offer to a friend."
+        ]
+    },
+    {
+        "tag": "depression-and-exercise",
+        "patterns": [
+            "How can exercise help with depression?",
+            "Tell me about the role of physical activity in managing depression",
+            "I struggle with motivation for exercise and depression",
+            "What types of exercise are beneficial for depression?"
+        ],
+        "responses": [
+            "Exercise can be a powerful tool for managing depression. Here's how it can help:",
+            "1. Releases Endorphins: Physical activity releases endorphins, natural mood-boosting chemicals that can alleviate depressive symptoms.",
+            "2. Reduces Stress: Exercise can reduce stress levels, which often exacerbate depression.",
+            "3. Boosts Self-Esteem: Regular exercise can improve self-esteem and body image, important aspects of mental well-being.",
+            "4. Enhances Sleep: A consistent exercise routine can help regulate sleep patterns, which are often disrupted in depression.",
+            "5. Social Interaction: Participating in group activities or sports can provide social interaction, reducing feelings of isolation.",
+            "When starting an exercise routine, choose activities you enjoy to increase motivation. Start small and gradually increase intensity and duration."
+        ]
+    },
+    {
+        "tag": "depression-causes",
+        "patterns": [
+            "What are the common causes of depression?",
+            "Tell me about the factors that can lead to depression",
+            "I'm trying to understand why I'm feeling depressed",
+            "What can trigger depression?"
+        ],
+        "responses": [
+            "Depression can be influenced by various factors. Here are some common causes and triggers of depression:",
+            "1. Genetic Predisposition: A family history of depression may increase the risk of developing the condition.",
+            "2. Brain Chemistry: Imbalances in brain chemicals (neurotransmitters) can contribute to depression.",
+            "3. Life Events: Major life events, such as loss of a loved one, job loss, or divorce, can trigger depression.",
+            "4. Chronic Illness: Living with a chronic health condition can lead to depressive symptoms due to physical and emotional challenges.",
+            "5. Substance Abuse: Alcohol or drug abuse can both be triggers and outcomes of depression.",
+            "6. Trauma: Past traumatic experiences, such as physical or emotional abuse, can contribute to the development of depression.",
+            "7. Hormonal Changes: Hormonal fluctuations, as seen in postpartum depression or during menopause, can trigger depressive episodes.",
+            "Identifying the potential causes of your depression can be an essential step in seeking appropriate help and treatment."
+        ]
+    },
+    {
+        "tag": "duration-of-feelings",
+        "patterns": [
+            "How long have you been feeling this way?",
+            "For how many days have you experienced these feelings?",
+            "Can you tell me the duration of your current emotional state?",
+            "Is this something you've been feeling for [X] days/weeks/months?"
+        ],
+        "responses": [
+            "Understanding the duration of your feelings is important. Please let me know how long you've been experiencing these emotions, whether it's a specific number of days, weeks, or months."
+        ]
+    },
+    {
+        "tag": "duration-of-feelings-range",
+        "patterns": [
+            "How long have you been feeling this way?",
+            "For how many days have you experienced these feelings?",
+            "Is this something you've been feeling for 2 to 7 days?",
+            "Can you tell me the duration of your feelings within a range of 2 to 7 days?"
+        ],
+        "responses": [
+            "Understanding the duration of your feelings is important. If you've been experiencing these emotions within a range of 2 to 7 days, please feel free to share more about what you're going through, and I'm here to listen and assist."
+        ]
+    },
+    {
+        "tag": "depression-and-physical-health",
+        "patterns": [
+            "How does depression affect physical health?",
+            "Tell me about the connection between depression and physical well-being",
+            "I'm concerned about the impact of depression on my body",
+            "What can I do to address the physical effects of depression?"
+        ],
+        "responses": [
+            "Depression can have a significant impact on physical health. Here's how it's connected to physical well-being:",
+            "1. Sleep Disturbances: Depression can lead to insomnia or excessive sleep, both of which affect overall health.",
+            "2. Changes in Appetite: Some individuals with depression experience changes in appetite, leading to weight gain or loss and potential nutritional imbalances.",
+            "3. Weakened Immune System: Depression may weaken the immune system, making individuals more susceptible to illnesses.",
+            "4. Increased Physical Pain: Some people with depression report physical symptoms such as headaches, muscle aches, and stomach problems.",
+            "5. Heart Health: Depression is associated with an increased risk of heart disease and can impact cardiovascular health.",
+            "Addressing the physical effects of depression may involve a combination of lifestyle changes, medical treatment, and seeking professional help."
+        ]
+    },
+    {
+        "tag": "depression-and-self-esteem",
+        "patterns": [
+            "How does depression affect self-esteem?",
+            "Tell me about the link between depression and self-esteem",
+            "I struggle with low self-esteem and depression",
+            "What can I do to boost my self-esteem while dealing with depression?"
+        ],
+        "responses": [
+            "Depression can have a significant impact on self-esteem. Here's how they are interconnected:",
+            "1. Negative Self-Talk: Depression often leads to negative self-talk, self-criticism, and feelings of worthlessness, all of which affect self-esteem.",
+            "2. Reduced Confidence: Depressive symptoms can erode self-confidence and make individuals doubt their abilities and self-worth.",
+            "3. Social Withdrawal: Depression can lead to isolation, reducing opportunities for positive social interactions that can boost self-esteem.",
+            "4. Self-Care Challenges: Managing self-care activities may become difficult, affecting physical well-being and self-esteem.",
+            "To boost self-esteem while dealing with depression, it's essential to address both the depressive symptoms and negative self-perceptions. Seeking therapy and practicing self-compassion can be helpful."
+        ]
+
+    },
+    {
+        "tag": "depression-and-sleep",
+        "patterns": [
+            "How does depression affect sleep?",
+            "Tell me about the connection between depression and sleep problems",
+            "I'm experiencing sleep disturbances due to depression",
+            "What can I do to improve my sleep while dealing with depression?"
+        ],
+        "responses": [
+            "Depression can have a profound impact on sleep. Here's how they are interconnected:",
+            "1. Insomnia: Depression can lead to difficulty falling asleep, staying asleep, or early morning awakenings.",
+            "2. Hypersomnia: Some individuals with depression may experience excessive sleepiness and find it hard to get out of bed.",
+            "3. Sleep Quality: Even if sleep duration is not affected, the quality of sleep may be poor, leading to unrefreshing rest.",
+            "4. Circadian Rhythm Disruption: Depression can disrupt the body's natural sleep-wake cycle, making it harder to establish a regular sleep pattern.",
+            "To improve sleep while dealing with depression, it's essential to address depressive symptoms, create a sleep-friendly environment, and establish a consistent sleep routine."
+        ]
+    },
+    {
+        "tag": "depression-and-physical-symptoms",
+        "patterns": [
+            "How does depression manifest in physical symptoms?",
+            "Tell me about the physical signs of depression",
+            "I'm experiencing physical symptoms along with depression",
+            "What can I do to address the physical manifestations of depression?"
+        ],
+        "responses": [
+            "Depression can manifest in physical symptoms as well. Here are some physical signs associated with depression:",
+            "1. Sleep Disturbances: Depression can lead to insomnia or excessive sleep, both of which affect overall well-being.",
+            "2. Changes in Appetite: Some individuals with depression experience changes in appetite, leading to weight gain or loss and potential nutritional imbalances.",
+            "3. Weakened Immune System: Depression may weaken the immune system, making individuals more susceptible to illnesses.",
+            "4. Increased Physical Pain: Some people with depression report physical symptoms such as headaches, muscle aches, and stomach problems.",
+            "5. Heart Health: Depression is associated with an increased risk of heart disease and can impact cardiovascular health.",
+            "Addressing the physical effects of depression may involve a combination of lifestyle changes, medical treatment, and seeking professional help."
+        ]
+    },
+    {
+        "tag": "depression-and-motivation",
+        "patterns": [
+            "How does depression affect motivation?",
+            "Tell me about the link between depression and motivation loss",
+            "I'm struggling with a lack of motivation due to depression",
+            "What can I do to regain motivation while dealing with depression?"
+        ],
+        "responses": [
+            "Depression often has a significant impact on motivation. Here's how it affects motivation and what you can do about it:",
+            "1. Energy Drain: Depression can lead to a lack of physical and mental energy, making it difficult to find motivation for tasks and activities.",
+            "2. Loss of Interest: Depressive symptoms often lead to a loss of interest in things that once brought joy and motivation.",
+            "3. Negative Thinking: Depression can result in negative thoughts and self-doubt, further diminishing motivation.",
+            "4. Coping Strategies: To regain motivation while dealing with depression, it's crucial to seek professional help, engage in self-care, set small goals, and gradually reintroduce activities that interest you.",
+            "Motivation can be rebuilt over time with the right support and strategies."
+        ]
+    },
+    {
+        "tag": "depression-and-self-identity",
+        "patterns": [
+            "How does depression affect self-identity?",
+            "Tell me about the impact of depression on a person's sense of self",
+            "I'm struggling with my self-identity due to depression",
+            "What can I do to maintain a strong self-identity while dealing with depression?"
+        ],
+        "responses": [
+            "Depression can have a significant impact on self-identity. Here's how it may affect one's sense of self and strategies to maintain a strong self-identity:",
+            "1. Negative Self-Perception: Depression can lead to negative self-perception and feelings of worthlessness, which can erode self-identity.",
+            "2. Loss of Interests: Depressive symptoms may result in a loss of interest in activities that once defined a person's identity.",
+            "3. Self-Compassion: Practicing self-compassion and self-acceptance can help rebuild a positive self-identity.",
+            "4. Seeking Professional Help: Therapy can provide valuable insights and coping strategies to preserve a strong sense of self.",
+            "5. Support Network: Lean on your support network, including friends and family, to maintain a sense of belonging and self-identity."
+        ]
+    },
+    {
+        "tag": "depression-therapy",
+        "patterns": [
+            "How is depression treated with therapy?",
+            "Tell me about the role of therapy in managing depression",
+            "I'm considering therapy for my depression",
+            "What are the common types of therapy used to treat depression?"
+        ],
+        "responses": [
+            "Therapy is a key component in the treatment of depression. Here's how depression can be treated with therapy and common types of therapy used:",
+            "1. Cognitive-Behavioral Therapy (CBT): CBT is a widely used therapy for depression. It helps individuals identify and change negative thought patterns and behaviors.",
+            "2. Interpersonal Therapy (IPT): IPT focuses on improving interpersonal relationships and communication, which can be especially helpful for depression linked to relationship issues.",
+            "3. Psychodynamic Therapy: This therapy explores how unconscious thoughts and past experiences may contribute to depressive symptoms.",
+            "4. Mindfulness-Based Cognitive Therapy (MBCT): MBCT combines elements of CBT with mindfulness techniques to help prevent the recurrence of depression.",
+            "5. Group Therapy: Participating in group therapy provides individuals with a supportive network and a safe space to share experiences and coping strategies.",
+            "It's important to work with a mental health professional to determine the most suitable therapy approach for your specific needs. Therapy can be highly effective in managing depression."
+        ]
+    },
+    {
+        "tag": "depression-and-productivity",
+        "patterns": [
+            "How does depression affect work and productivity?",
+            "Tell me about the relationship between depression and professional life",
+            "I'm struggling with work-related challenges due to depression",
+            "What can I do to maintain productivity while dealing with depression?"
+        ],
+        "responses": [
+            "Depression can significantly impact work and productivity. Here's how it affects professional life and strategies to maintain productivity:",
+            "1. Reduced Concentration: Depression may lead to difficulty concentrating, making it challenging to complete tasks and meet deadlines.",
+            "2. Absenteeism: Individuals with depression may take more sick days or miss work due to their symptoms.",
+            "3. Presenteeism: Some people with depression go to work, but their productivity is greatly reduced due to the condition.",
+            "4. Strained Relationships: Depression can affect interactions with colleagues and supervisors, potentially leading to strained professional relationships.",
+            "To maintain productivity while dealing with depression, it's important to seek professional help, inform your employer about your condition if necessary, and consider workplace accommodations."
+        ]
+    },
+    {
+        "tag": "support-line-number",
+        "patterns": [
+            "Can you provide a support line number for depression?",
+            "I need a helpline for depression",
+            "Where can I find a support line to talk about depression?",
+            "I'm looking for a hotline to discuss my feelings of depression"
+        ],
+        "responses": [
+            "I'm here to help you. If you're in need of immediate support for depression, please consider reaching out to a crisis hotline or support line. In the India, you can contact the National Suicide Prevention Lifeline at 1-800-273-8255. If you're located in a different region, please let me know, and I'll provide you with a relevant helpline number."
+        ]
+    },
+    {
+        "tag": "thought-journaling",
+        "patterns": [
+            "What is thought journaling?",
+            "How can thought journaling help with depression?",
+            "Tell me about using thought journaling for managing depressive thoughts",
+            "I'm interested in thought journaling for my depression"
+        ],
+        "responses": [
+            "Thought journaling is a valuable cognitive-behavioral therapy technique that can assist in managing depressive thoughts. Here's how it works:",
+            "1. Identify Negative Thoughts: Start by recognizing and noting down negative or self-defeating thoughts that contribute to your depression.",
+            "2. Analyze and Challenge Thoughts: Examine these thoughts for accuracy and evidence. Challenge irrational or unhelpful beliefs.",
+            "3. Replace with Positive Thoughts: Replace negative thoughts with more balanced and positive alternatives.",
+            "4. Track Emotional Responses: Note how these thoughts make you feel and how they impact your mood.",
+            "5. Monitor Progress: Over time, track your progress and observe changes in thought patterns and emotions.",
+            "Thought journaling can be a powerful tool for understanding and changing thought patterns that contribute to depression."
+        ]
+    },
+    {
+        "tag": "transtheoretical-model",
+        "patterns": [
+            "What is the Transtheoretical Model of Change?",
+            "How does the Transtheoretical Model apply to managing depression?",
+            "Tell me about stages of change in the context of depression",
+            "I'm interested in using the Transtheoretical Model to address my depression"
+        ],
+        "responses": [
+            "The Transtheoretical Model of Change is a framework used in psychology to understand and facilitate behavior change. It has relevance in managing depression. Here's how it applies:",
+            "1. Precontemplation: In the precontemplation stage, individuals may not be aware of their depression or may not see the need for change.",
+            "2. Contemplation: In this stage, individuals recognize their depression and are contemplating the need for change but may not be ready to take action.",
+            "3. Preparation: At this stage, individuals are actively preparing to address their depression, such as seeking information and setting goals.",
+            "4. Action: The action stage involves taking concrete steps to manage depression, such as starting therapy or making lifestyle changes.",
+            "5. Maintenance: In the maintenance stage, individuals work to sustain positive changes and prevent relapse.",
+            "6. Termination: Some models include a termination stage where individuals have successfully overcome their depression and are no longer at risk of relapse.",
+            "Understanding the Transtheoretical Model can help individuals gauge their readiness for change and tailor their approach to managing depression accordingly."
+        ]
+    },
+    {
+        "tag": "depression-diet",
+        "patterns": [
+            "How can diet impact depression?",
+            "Tell me about the relationship between nutrition and managing depression",
+            "I'm interested in dietary strategies to improve my mood and mental health",
+            "What should I eat to help with my depression?"
+        ],
+        "responses": [
+            "Diet can play a significant role in managing depression. Here's how it can impact your mental health and some dietary strategies to consider:",
+            "1. Nutrient-Rich Foods: A diet rich in fruits, vegetables, whole grains, and lean proteins provides essential nutrients that support mood and overall well-being.",
+            "2. Omega-3 Fatty Acids: Omega-3s, found in fatty fish, walnuts, and flaxseeds, have been linked to reduced symptoms of depression.",
+            "3. B Vitamins: Foods like leafy greens, legumes, and whole grains contain B vitamins, which are important for brain health and mood regulation.",
+            "4. Limit Processed Foods: Processed and sugary foods can contribute to mood swings and should be consumed in moderation.",
+            "5. Stay Hydrated: Dehydration can affect mood and cognitive function, so be sure to drink enough water.",
+            "6. Mindful Eating: Practicing mindful eating can help you become more aware of how food affects your mood and make healthier choices.",
+            "Maintaining a mood-boosting diet is a valuable part of managing depression, but it's essential to consult with a healthcare professional for personalized dietary recommendations."
+        ]
+    },
+    {
+        "tag": "self-talk-for-depression",
+        "patterns": [
+            "What is self-talk in the context of managing depression?",
+            "How can positive self-talk help with depression?",
+            "Tell me about using self-talk techniques to improve my mental health",
+            "I'm interested in learning how to use self-talk to cope with depression"
+        ],
+        "responses": [
+            "Self-talk refers to the internal dialogue or thoughts that you have with yourself. It plays a crucial role in managing depression. Here's how it can help:",
+            "1. Identify Negative Self-Talk: Recognize and become aware of self-defeating or negative thoughts that contribute to depressive feelings.",
+            "2. Challenge and Reframe: Challenge these negative thoughts by evaluating their accuracy and reframing them with more positive and realistic alternatives.",
+            "3. Practice Self-Compassion: Treat yourself with kindness and self-compassion, acknowledging that it's okay to have difficult moments.",
+            "4. Affirmations: Use positive affirmations to reinforce your self-worth and motivation to overcome depression.",
+            "5. Self-Care: Incorporate self-care practices into your self-talk, reminding yourself to prioritize your mental and emotional well-being.",
+            "6. Professional Support: In challenging moments, it's important to seek professional help from therapists or counselors who can guide you in improving your self-talk.",
+            "Positive self-talk is a powerful tool in managing depression and can help shift your perspective toward a more positive and hopeful outlook."
+        ]
+    },
+    {
+        "tag": "solution-focused-therapy-for-depression",
+        "patterns": [
+            "What is solution-focused therapy for depression?",
+            "How can solution-focused therapy help in managing depression?",
+            "Tell me about the principles of solution-focused therapy in the context of depression",
+            "I'm interested in learning about solution-focused techniques to address my depression"
+        ],
+        "responses": [
+            "Solution-focused therapy is an approach that can be beneficial in managing depression. Here's how it works and its principles:",
+            "1. Future Orientation: Solution-focused therapy focuses on future solutions rather than dwelling on past problems. It encourages individuals to envision positive changes.",
+            "2. Client Expertise: It recognizes that individuals are the experts in their own lives and that they have the resources to find solutions.",
+            "3. Small Steps: The therapy emphasizes taking small, manageable steps to work towards change, rather than overwhelming oneself with major goals.",
+            "4. Goal Setting: Setting specific, achievable goals is a key component of the therapy. These goals serve as a roadmap for change.",
+            "5. Collaborative Approach: The therapist and client work together as partners in the therapeutic process to identify solutions and strategies.",
+            "6. Strengths-Based: Solution-focused therapy focuses on the individual's strengths, resources, and abilities to overcome depression.",
+            "This approach can help individuals shift their focus from problems to solutions, thereby reducing depressive symptoms and improving overall well-being."
+        ]
+    },
+    {
+        "tag": "body-scan-mindfulness-for-depression",
+        "patterns": [
+            "What is a body scan in mindfulness practice for depression?",
+            "How can a body scan help in managing depressive symptoms?",
+            "Tell me about the benefits of body scan meditation in the context of depression",
+            "I'm interested in using body scan mindfulness for my depression"
+        ],
+        "responses": [
+            "The body scan is a mindfulness practice that can be helpful in managing depression. Here's how it works and its benefits:",
+            "1. Awareness of Sensations: The body scan involves systematically focusing your attention on different parts of your body, becoming aware of physical sensations, tension, or discomfort.",
+            "2. Grounding Technique: It serves as a grounding technique, helping individuals stay present in the moment and shift their focus from depressive thoughts.",
+            "3. Stress Reduction: The body scan can reduce stress and promote relaxation, which can be especially beneficial for those dealing with depression.",
+            "4. Emotional Regulation: By paying attention to physical sensations without judgment, it can help individuals regulate their emotions and reduce feelings of overwhelm.",
+            "5. Improved Self-Care: Practicing the body scan regularly can be a form of self-care that contributes to better mental and emotional well-being.",
+            "The body scan is a valuable tool in the toolbox of mindfulness techniques for managing depression and improving overall mental health."
+        ]
+    }
+    
+    
+    
+    
+    
+      
+    
+    
+
+    
+    
+    
+    
+
+  
+
+    ]
+}
